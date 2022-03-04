@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="projecto_web.css" media="screen" />
+	<link rel="projecto_web" type="text/html" href="projecto_web.html" />
+	<link rel="pagina_1" type="text/html" href="pagina_1.html" />
+	<link rel="stylesheet" href="css/screen.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+	<!--https://bbbootstrap.com/snippets/animated-login-and-sign-up-form-59406852-->
+	<div class="row">
+		<div  class="col-md-6 mx-auto p-0">
+			<form id="form" name="login-box" class="login-box" action="projecto_web.html" method="post">
+				<div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
+						for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab"
+						class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+					<div class="login-space">
+						<div class="login">
+							<div class="group"> <label for="user" class="label">Username </label> 
+								<input name="login-user" id="user" type="text" class="input" placeholder="Enter your username" required minlength="3" >
+							</div>
+							<div class="group"> <label for="pass" class="label">Password</label> 
+								<input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password" required minlength="5"> 
+							</div>
+							<div class="group"> <input id="check" type="checkbox" class="check" checked> <label
+									for="check"><span class="icon"></span> Keep me Signed in</label> </div>
+							<div class="group"> <input type="submit" class="button" value="Submit"> </div>
+							<div class="hr"></div>
+							<div class="foot"> <a href="#">Forgot Password?</a> </div>
+						</div>
+						<div  class="sign-up-form">
+							<div class="group"> <label for="user" class="label">Username </span></label> <input id="user"
+									type="text" class="input" placeholder="Create your Username" required> </div>
+							<div class="group"> <label for="pass" class="label">Password</label> <input id="pass"
+									type="password" class="input" data-type="password"
+									placeholder="Create your password" required> </div>
+							<div class="group"> <label for="pass" class="label">Repeat Password</label> <input id="pass"
+									type="password" class="input" data-type="password"
+									placeholder="Repeat your password" required> </div>
+							<div class="group"> <label for="email" class="label">Email Address</label> <input id="pass"
+									type="email" class="input" placeholder="Enter your email address" required> </div>
+							<div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
+							<div class="hr"></div>
+							<div class="foot"> <label for="tab-1">Already Member?</label> </div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<script>
+		
+
+	$().ready(function() {
+		// validate the form when it is submitted
+		var validator = $("#form").validate({
+			
+			errorPlacement: function(error, element) {
+				
+				// Append error within linked label
+				$( element )
+					.closest( "form" )
+						.find( "label[for='" + element.attr( "id" ) + "']" )
+							.append( error );
+			},
+			errorElement: "span",
+			messages: {
+				user: {
+					required: " (required)",
+					minlength: " (must be at least 3 characters)"
+				},
+				password: {
+					required: " (required)",
+					minlength: " (must be between 5 and 12 characters)",
+					maxlength: " (must be between 5 and 12 characters)"
+				}
+			}
+		});
+
+	});
+
+
+	</script>
+
+	<!--
+ multistep form 
+multistep form
+<form id="msform">
+   progressbar 
+    <ul id="progressbar">
+      <li class="active">Account Setup</li>
+      <li>Client Profile</li>
+      <li>Service Choice</li>
+    </ul>
+    fieldsets 
+    <fieldset>
+      <h3 class="fs-title">Client account</h3>
+      <h3 class="fs-subtitle">Step 1</h3>
+      <input type="text" name="email" placeholder="Email" />
+      <input type="password" name="pass" placeholder="Password" />
+      <input type="password" name="cpass" placeholder="Confirm Password" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Social Profiles</h2>
+      <h3 class="fs-subtitle">Your presence on the social network</h3>
+      <input type="text" name="twitter" placeholder="Twitter" />
+      <input type="text" name="facebook" placeholder="Facebook" />
+      <input type="text" name="gplus" placeholder="Google Plus" />
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Personal Details</h2>
+      <h3 class="fs-subtitle">We will never sell it</h3>
+      <input type="text" name="fname" placeholder="First Name" />
+      <input type="text" name="lname" placeholder="Last Name" />
+      <input type="text" name="phone" placeholder="Phone" />
+      <textarea name="address" placeholder="Address"></textarea>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+  </form>
+
+
+
+
+  <script>
+      
+      
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+
+  </script>
+-->
+
+
+</body>
+
+<footer>
+</footer>
