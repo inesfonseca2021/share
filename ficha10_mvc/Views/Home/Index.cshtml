@@ -1,0 +1,78 @@
+﻿@using ficha10
+
+@model IEmployees;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul>
+
+    @foreach (var employee in Model.EmployeesList)
+    {
+        <li>
+            @Html.DisplayFor(modelItem=>employee.UserId)
+            @Html.DisplayFor(modelItem=>employee.JobTitle)
+            @Html.DisplayFor(modelItem=>employee.FirstName)
+            @Html.DisplayFor(modelItem=>employee.LastName)
+            @Html.DisplayFor(modelItem=>employee.EmployeeCode)
+
+            @Html.ActionLink("Edit", "Edit", new {UserId=employee.UserId})
+            @Html.ActionLink("Delete", "Delete", new {UserId=employee.UserId})
+            @Html.ActionLink("Details", "Details", new {UserId=employee.UserId})
+        </li>
+        
+    }
+
+</ul>
+
+
+<!--search bar-->
+<div class="input-group">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button type="button" class="btn btn-primary">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+<!--table with the info-->
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">UserId</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">JobTitle</th>
+      <th scope="col">EmployeeCode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>ã</td>
+      <td>a</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>b</td>
+      <td>b</td>
+      <td>b</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+<!--add, edit and delete buttons-->
+<div class="container mt-3">
+  <h2>Button Styles</h2>
+
+  <button type="button" class="btn btn-primary">Add</button>
+  <button type="button" class="btn btn-primary">Edit</button>
+  <button type="button" class="btn btn-primary">Delete</button>
+       
+</div>
