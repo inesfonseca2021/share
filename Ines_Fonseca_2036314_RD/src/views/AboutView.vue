@@ -1,0 +1,498 @@
+<template>
+
+  <!--*********************************** home page Starts ***********************************-->
+
+  <!------------------------------- about section  Starts-------------------------------->
+  <header class="masthead" id="about">
+    <div class="container">
+      <a>
+        <!-- welcome message-->
+        <h1 id="welcome-message">
+          Hi, I am Inês, a
+          <span id="message-shadow">comunication </span>
+          <!--purple effect in the text-->
+          <span id="message-shadow">designer</span>
+          based in Portugal. Currently looking for freelance jobs, while having
+          fun at
+          <span style="color: rgb(105, 105, 231)">@imaginario</span>
+          <span style="color: rgb(105, 105, 231)">comunitario</span>
+          and working on becoming a
+          <span id="message-shadow">citizen </span>
+          <span id="message-shadow">developer</span>
+        </h1>
+      </a>
+      <div>
+        <!-- button that goes to the contact form-->
+        <button
+          @click="goto('contact')"
+          class="btn btn-primary btn-xl text-uppercase"
+        >
+          Let´s talk :)
+        </button>
+
+        <!-- button that goes to the login form-->
+        <router-link to="/login"
+          ><button
+            id="client-button"
+            class="btn btn-primary btn-xl text-uppercase"
+          >
+            I am a client
+          </button>
+        </router-link>
+
+        <!-- scroll icon-->
+        <div id="scroll" class="text-center">
+          <p>👀</p>
+          <h2 class="section-heading-scroll">scroll</h2>
+        </div>
+      </div>
+      <!------------------------------- about section  Ends -------------------------------->
+
+      <!----------- Floating Social Media bar Starts https://codepen.io/bhktkshn/pen/YzXawzZ ------------>
+      <div class="float-sm">
+        <div class="fl-fl float-fb">
+          <!-- social media icon - instagram-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-instagram"
+            style="margin-top: 14px; margin-left: 15px"
+          >
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+            />
+          </svg>
+          <!-- social media message - instagram-->
+          <a href="https://www.instagram.com/" target="_blank"> Like!</a>
+        </div>
+
+        <!-- social media icon - github-->
+        <div class="fl-fl float-tw">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-instagram"
+            style="margin-top: 14px; margin-left: 15px"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+            />
+          </svg>
+          <!-- social media message - github-->
+          <a href="https://github.com/" target="_blank">Follow!</a>
+        </div>
+        <!-- social media icon - twitter-->
+        <div class="fl-fl float-gp">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-instagram"
+            style="margin-top: 14px; margin-left: 15px"
+          >
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+            />
+          </svg>
+          <!-- social media message - twitter-->
+          <a href="https://twitter.com/?lang=pt" target="_blank">Recommend!</a>
+        </div>
+
+        <!-- social media icon - youtube-->
+        <div class="fl-fl float-rs">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-instagram"
+            style="margin-top: 14px; margin-left: 15px"
+          >
+            <path
+              d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+            />
+          </svg>
+          <!-- social media message - youtube-->
+          <a href="https://www.youtube.com/" target="_blank">Follow!</a>
+        </div>
+        <!-- social media icon - linkedin-->
+        <div class="fl-fl float-ig">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-instagram"
+            style="margin-top: 14px; margin-left: 15px"
+          >
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+            />
+          </svg>
+          <!-- social media message - linkedin-->
+          <a
+            href="https://www.linkedin.com/in/in%C3%AAs-fonseca-5604a51ab/"
+            target="_blank"
+            >Contact me!</a
+          >
+        </div>
+        <!-- social media icon - behance-->
+        <div class="fl-fl float-pn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-instagram"
+            style="margin-top: 14px; margin-left: 15px"
+          >
+            <path
+              d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z"
+            />
+          </svg>
+          <!-- social media message - behance-->
+          <a href="https://www.behance.net/" target="_blank">Follow !</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!----------- Floating Social Media bar Ends https://codepen.io/bhktkshn/pen/YzXawzZ ------------>
+
+  <!------------------------------- services section  Starts -------------------------------->
+
+  <section ref="purpleDiv" id="purpleDiv" class="page-section">
+    <div class="container" id="services">
+      <div class="row text-center">
+        <!-- services 3 collumns -->
+        <h2 class="section-heading text-uppercase">Services</h2>
+
+        <div class="col-md-3">
+          <h4 class="my-3">Design</h4>
+          <h5 class="btn-xl" v-for="(item, id) in services" :key="id">
+            {{ item.serviceDesign }}
+            <!-- input from admin page -->
+          </h5>
+        </div>
+        <div class="col-md-3">
+          <h4 class="my-3" >Workshops</h4>
+          <h5 class="btn-xl" v-for="(item, id) in services" :key="id">
+            {{ item.serviceWorkshops }}
+            <!-- input from admin page -->
+          </h5>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="my-3">Strategy</h4>
+          <h5 class="btn-xl" v-for="(item, id) in services" :key="id">
+            {{ item.serviceStrategy }}
+            <!-- input from admin page -->
+          </h5>
+        </div>
+
+        <!-- services explanation text -->
+        <div class="col-md-3">
+          <h3 id="service-text text-muted">
+            <img src="@/assets/arrow.png" alt="arrow" width="25px" />
+            <!-- arrow icon -->
+            I like to use a human centered aproach to design, passionated people
+            commited to a common and social impact.
+          </h3>
+
+          <!-- services call to action -->
+          <div>
+            <h4 id="call-to-action">Let´s work together!</h4>
+            <!-- button that goes to the enquire section -->
+            <button
+              @click="gotoenquire('enquire')"
+              class="btn btn-primary btn-xl text-uppercase"
+            >
+              enquire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- continuos scroll text -->
+  <div class="scroll-text">
+    <h3>
+      Education 🌼 Culture 🌐 Ilustration 🍌 Strategy 🌼 Visual communication 🌐
+      Web design 🍌 Sustainability 🌼 Social needs tecnology
+    </h3>
+  </div>
+
+  <!------------------------------- services section  Ends -------------------------------->
+
+  <!------------------------------- process section  Starts -------------------------------->
+  <section class="page-section" style="background: #f7f3f3">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading">The process</h2>
+      </div>
+
+      <!-- first column icon -->
+      <div class="row text-center">
+        <div class="col-md-4" style="padding-left: 25px; padding-right: 25px">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              fill="currentColor"
+              class="bi bi-chat"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"
+              />
+            </svg>
+          </p>
+          <!-- first column text -->
+          <h4 class="my-3"><span id="message-shadow">Let’s chat</span></h4>
+          <h5>
+            You found me, we've discussed the perfect service for you and you're
+            all booked in! Next we will arrange a strategy call where i'll ask
+            lots of questions to get to know you / your business better
+          </h5>
+        </div>
+
+        <!-- second column icon -->
+        <div class="col-md-4" style="padding-left: 25px; padding-right: 25px">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              fill="currentColor"
+              class="bi bi-emoji-smile"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"
+              />
+            </svg>
+          </p>
+          <!-- second column text -->
+          <h4 class="my-3"><span id="message-shadow">Design Time</span></h4>
+          <h5>
+            After doing research, working on the strategy and putting the
+            foundations in place, it's time to start the design process !
+          </h5>
+        </div>
+
+        <!-- third column icon -->
+        <div class="col-md-4" style="padding-left: 25px; padding-right: 25px">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              fill="currentColor"
+              class="bi bi-arrow-through-heart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z"
+              />
+            </svg>
+          </p>
+          <!-- third column text -->
+          <h4 class="my-3"><span id="message-shadow">Launch !!!</span></h4>
+          <h5>
+            Ohhoooww! The design is done, aproved and you're so excited to
+            receive the files and launch it !
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------------------------- process section  Ends -------------------------------->
+
+  <!------------------------------- service enquire section  Starts -------------------------------->
+  <section
+    id="enquire-section work contactForm section-heading form-group "
+    ref="enquire"
+  >
+    <div class="page-section " id="msform">
+      <div class="text-center ">
+        <h2 class="section-heading">Work with me</h2>
+      </div>
+      <fieldset >
+        <!-- intro of the enquire -->
+        <h2 class="fs-title">Let's start this adventure!</h2>
+        <h3 class="fs-subtitle">
+          Please check my work and make sure that is the kind of work you are
+          looking for. If yes, am sure we will be a perfct match for one
+          another!
+        </h3>
+        <!-- inputs of the enquire -->
+        <!-- Name input -->
+        <input
+          class="input"
+          type="text"
+          name="fname"
+          id="user"
+          placeholder="Name"
+          required
+          minlength="3"
+        />
+        <!-- Email input -->
+        <input 
+        type="text" 
+        name="email" 
+        placeholder="Email" />
+        <!-- Business Name  input-->
+        <input 
+        type="text" 
+        name="business" 
+        placeholder="Business Name" />
+        <!-- Where are you based input-->
+        <input 
+        type="address" 
+        name="based" 
+        placeholder="Where are you based" />
+        <!-- text about the business input-->
+        <textarea
+          type="text"
+          placeholder="Tell me a bit of your business, and why you are passionated about it"
+        ></textarea>
+        <!-- services input-->
+        <input 
+        type="text" 
+        name="services" 
+        placeholder="Services you need" />
+
+        <!-- submit button -->
+        <div class="text-center">
+          <button class="btn btn-primary btn-xl text-uppercase">submit</button>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+  <!------------------------------- service enquire section  Ends -------------------------------->
+
+  <!------------------------------- contact form section  Starts -------------------------------->
+  <section class="page-section" id="contact" ref="contact">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Get in touch</h2>
+      </div>
+      <form id="contactForm">
+        <div class="row align-items-stretch mb-5">
+          <div class="section-heading">
+            <div class="form-group">
+              <!-- Name input-->
+              <input
+                class="form-control"
+                id="name"
+                type="text"
+                placeholder="Your Name *"
+                data-sb-validations="required"
+                v-model="name"
+                name="name"
+              />
+              <div class="invalid-feedback" data-sb-feedback="name:required">
+                A name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <!-- Email address input-->
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                placeholder="Your Email *"
+                data-sb-validations="required,email"
+                v-model="email"
+                name="email"
+              />
+              <div class="invalid-feedback" data-sb-feedback="email:required">
+                An email is required.
+              </div>
+              <div class="invalid-feedback" data-sb-feedback="email:email">
+                Email is not valid.
+              </div>
+            </div>
+            <div class="form-group mb-md-0">
+              <!-- Message input-->
+              <textarea
+                class="form-control"
+                id="message"
+                placeholder="Your Message *"
+                data-sb-validations="required"
+                name="message"
+                v-model="message"
+              ></textarea>
+              <div class="invalid-feedback" data-sb-feedback="message:required">
+                A message is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button-->
+        <div class="text-center">
+          <button class="btn btn-primary btn-xl text-uppercase">
+            send message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</template>
+<!------------------------------- contact form section  Ends -------------------------------->
+<!--*********************************** home page Starts ***********************************-->
+
+
+<style scoped>
+@import "@/assets/about.css";
+</style>
+
+
+<script>
+import axios from "axios";
+
+//services inputs
+export default {
+  //get inputs
+  name: "get-request-async-await",
+  data() {
+    return {
+      services: null,
+    };
+  },
+
+  async created() {
+    // GET request using axios with async/await
+
+    const response = await axios.get(
+      "https://webproject-60f9b-default-rtdb.firebaseio.com/.json"
+    );
+    this.services = response.data;
+  },
+
+  //go to contact
+  methods: {
+    goto(contact) {
+      var element = this.$refs[contact];
+      var top = element.offsetTop;
+
+      window.scrollTo(0, top);
+    },
+    //go to enquire
+    gotoenquire(enquire) {
+      var element = this.$refs[enquire];
+      var top = element.offsetTop;
+
+      window.scrollTo(0, top);
+    },
+  },
+};
+</script>
